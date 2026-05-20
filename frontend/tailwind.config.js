@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f4ff',
+          100: '#dbe4ff',
+          200: '#bac8ff',
+          300: '#91a7ff',
+          400: '#748ffc',
+          500: '#5c7cfa',
+          600: '#4c6ef5',
+          700: '#4263eb',
+          800: '#3b5bdb',
+          900: '#364fc7'
+        },
+        accent: {
+          50: '#fff0f6',
+          100: '#ffdeeb',
+          200: '#fcc2d7',
+          300: '#faa2c1',
+          400: '#f783ac',
+          500: '#f06595',
+          600: '#e64980',
+          700: '#d6336c',
+          800: '#c2255c',
+          900: '#a61e4d'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-in-right': 'slideInRight 0.3s ease-out',
+        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+        'bounce-in': 'bounceIn 0.6s ease-out'
+      },
+      keyframes: {
+        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        slideInRight: { '0%': { opacity: '0', transform: 'translateX(20px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+        pulseSoft: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0.7' } },
+        bounceIn: { '0%': { transform: 'scale(0.95)', opacity: '0' }, '50%': { transform: 'scale(1.02)' }, '100%': { transform: 'scale(1)', opacity: '1' } }
+      },
+      backdropBlur: { xs: '2px' }
+    }
+  },
+  plugins: [],
+}
